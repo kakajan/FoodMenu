@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+    <title>منوی دیجیتال - غذای سنتی گلین</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/output.css" />
+    <style>
+      body {
+        font-family: "Vazirmatn", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .hero-title span {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+      }
+
+      .hero-subtitle,
+      .hero-button {
+        opacity: 0;
+      }
+
+      #preloader {
+        transition: opacity 0.5s ease-out;
+      }
+
+      /* پس‌زمینه هدر با تصویر و Overlay */
+      .header-bg {
+        background-color: black;
+        position: relative;
+        isolation: isolate; /* برای اطمینان از z-index overlay */
+      }
+
+      .header-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+        z-index: -1;
+      }
+
+      /* پس‌زمینه فوتر با تصویر و Overlay */
+      .footer-bg {
+        background-color: black;
+        position: relative;
+        isolation: isolate;
+      }
+
+      .footer-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8); /* تیره تر برای خوانایی متن */
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body class="bg-brand-red-50 text-gray-900 antialiased">
+    <div
+      id="preloader"
+      class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-brand-red-500 text-white"
+    >
+      <div
+        class="h-16 w-16 animate-spin rounded-full border-4 border-t-white border-brand-red-300"
+      ></div>
+      <h2 class="mt-6 text-2xl font-bold">غذای سنتی گلین</h2>
+      <p class="mt-2 animate-pulse">لطفا کمی صبر کنید</p>
+    </div>
+
+    <header
+      class="min-h-screen flex flex-col items-center justify-center text-center p-8 relative overflow-hidden header-bg text-white"
+    >
+      <div class="relative z-10">
+        <img src="logo.svg" alt="GelinFood" class="size-70 m-auto mb-15" />
+
+        <h1
+          class="hero-title text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 drop-shadow-lg"
+        >
+          <span>غذای</span>
+          <span>سنتی</span>
+          <span>گلین</span>
+        </h1>
+        <p
+          class="hero-subtitle text-xl md:text-2xl text-gray-100 font-medium mb-12 drop-shadow-md"
+        >
+          طعم اصیل غذاهای ترکمن و ایرانی در گنبد کاووس
+        </p>
+        <a
+          href="#menu"
+          class="hero-button inline-block bg-brand-red-600 text-white font-bold py-3 px-10 text-lg rounded-full shadow-lg transition-all duration-300 hover:bg-brand-red-700 hover:shadow-xl transform hover:-translate-y-1"
+        >
+          مشاهده منو
+        </a>
+      </div>
+    </header>
+
+    <main id="menu" class="container mx-auto px-6 py-24">
+      <h2 class="text-4xl font-extrabold text-center text-brand-red-700 mb-16">
+        منوی داخل سالن
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden border border-brand-red-100 gs-fade-up"
+        >
+          <div class="p-6 flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">
+                چکدرمه هیزمی (پرس کامل)
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">
+                طعم اصیل چکدرمه پخته شده روی هیزم
+              </p>
+              <button
+                class="share-button mt-4 cursor-pointer inline-flex items-center gap-x-1 text-sm text-brand-red-600 hover:text-brand-red-800 transition-colors opacity-70 hover:opacity-100"
+                data-title="چکدرمه هیزمی (پرس کامل)"
+                data-text="طعم اصیل چکدرمه پخته شده روی هیزم"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>اشتراک</span>
+              </button>
+            </div>
+            <div class="text-left flex-shrink-0">
+              <span class="text-2xl font-extrabold text-brand-red-700"
+                >۱۰۰</span
+              >
+              <span class="text-sm text-gray-600 block">تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden border border-brand-red-100 gs-fade-up"
+        >
+          <div class="p-6 flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">
+                چکدرمه هیزمی (نیم پرس)
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">اندازه اقتصادی</p>
+              <button
+                class="share-button mt-4 cursor-pointer inline-flex items-center gap-x-1 text-sm text-brand-red-600 hover:text-brand-red-800 transition-colors opacity-70 hover:opacity-100"
+                data-title="چکدرمه هیزمی (نیم پرس)"
+                data-text="اندازه اقتصادی"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>اشتراک</span>
+              </button>
+            </div>
+            <div class="text-left flex-shrink-0">
+              <span class="text-2xl font-extrabold text-brand-red-700">۸۰</span>
+              <span class="text-sm text-gray-600 block">تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden border border-brand-red-100 gs-fade-up"
+        >
+          <div class="p-6 flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">
+                بورگ گوشت خالص تنوری
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">پخته شده در تنور سنتی</p>
+              <button
+                class="share-button mt-4 cursor-pointer inline-flex items-center gap-x-1 text-sm text-brand-red-600 hover:text-brand-red-800 transition-colors opacity-70 hover:opacity-100"
+                data-title="بورگ گوشت خالص تنوری"
+                data-text="پخته شده در تنور سنتی"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>اشتراک</span>
+              </button>
+            </div>
+            <div class="text-left flex-shrink-0">
+              <span class="text-2xl font-extrabold text-brand-red-700">۶۰</span>
+              <span class="text-sm text-gray-600 block">تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden border border-brand-red-100 gs-fade-up"
+        >
+          <div class="p-6 flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">بورگ مخلوط تنوری</h3>
+              <p class="text-gray-500 text-sm mt-1">ترکیب سیب‌زمینی و گوشت</p>
+              <button
+                class="share-button mt-4 cursor-pointer inline-flex items-center gap-x-1 text-sm text-brand-red-600 hover:text-brand-red-800 transition-colors opacity-70 hover:opacity-100"
+                data-title="بورگ مخلوط تنوری"
+                data-text="ترکیب سیب‌زمینی و گوشت"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>اشتراک</span>
+              </button>
+            </div>
+            <div class="text-left flex-shrink-0">
+              <span class="text-2xl font-extrabold text-brand-red-700">۴۰</span>
+              <span class="text-sm text-gray-600 block">تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden border border-brand-red-100 gs-fade-up"
+        >
+          <div class="p-6 flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">مانتی</h3>
+              <p class="text-gray-500 text-sm mt-1">
+                خوراک سنتی لذیذ با سس مخصوص
+              </p>
+              <button
+                class="share-button mt-4 cursor-pointer inline-flex items-center gap-x-1 text-sm text-brand-red-600 hover:text-brand-red-800 transition-colors opacity-70 hover:opacity-100"
+                data-title="مانتی"
+                data-text="خوراک سنتی لذیذ با سس مخصوص"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>اشتراک</span>
+              </button>
+            </div>
+            <div class="text-left flex-shrink-0">
+              <span class="text-2xl font-extrabold text-brand-red-700"
+                >۱۰۰</span
+              >
+              <span class="text-sm text-gray-600 block">تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden border border-brand-red-100 gs-fade-up"
+        >
+          <div class="p-6 flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">
+                قورمه سبزی (پرس کامل)
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">
+                خورشت اصیل ایرانی با برنج
+              </p>
+              <button
+                class="share-button mt-4 cursor-pointer inline-flex items-center gap-x-1 text-sm text-brand-red-600 hover:text-brand-red-800 transition-colors opacity-70 hover:opacity-100"
+                data-title="قورمه سبزی (پرس کامل)"
+                data-text="خورشت اصیل ایرانی با برنج"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>اشتراک</span>
+              </button>
+            </div>
+            <div class="text-left flex-shrink-0">
+              <span class="text-2xl font-extrabold text-brand-red-700">۹۰</span>
+              <span class="text-sm text-gray-600 block">تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden border border-brand-red-100 gs-fade-up"
+        >
+          <div class="p-6 flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">
+                قورمه سبزی (نیم پرس)
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">خورشت اصیل ایرانی</p>
+              <button
+                class="share-button mt-4 cursor-pointer inline-flex items-center gap-x-1 text-sm text-brand-red-600 hover:text-brand-red-800 transition-colors opacity-70 hover:opacity-100"
+                data-title="قورمه سبزی (نیم پرس)"
+                data-text="خورشت اصیل ایرانی"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>اشتراک</span>
+              </button>
+            </div>
+            <div class="text-left flex-shrink-0">
+              <span class="text-2xl font-extrabold text-brand-red-700">۷۰</span>
+              <span class="text-sm text-gray-600 block">تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden border border-brand-red-100 gs-fade-up"
+        >
+          <div class="p-6 flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">پیتزا مینی</h3>
+              <p class="text-gray-500 text-sm mt-1">یک نفره و خوشمزه</p>
+              <button
+                class="share-button mt-4 cursor-pointer inline-flex items-center gap-x-1 text-sm text-brand-red-600 hover:text-brand-red-800 transition-colors opacity-70 hover:opacity-100"
+                data-title="پیتزا مینی"
+                data-text="یک نفره و خوشمزه"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>اشتراک</span>
+              </button>
+            </div>
+            <div class="text-left flex-shrink-0">
+              <span class="text-2xl font-extrabold text-brand-red-700">۵۰</span>
+              <span class="text-sm text-gray-600 block">تومان</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden border border-brand-red-100 gs-fade-up"
+        >
+          <div class="p-6 flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">پیتزا ۲ نفره</h3>
+              <p class="text-gray-500 text-sm mt-1">اندازه خانواده</p>
+              <button
+                class="share-button mt-4 cursor-pointer inline-flex items-center gap-x-1 text-sm text-brand-red-600 hover:text-brand-red-800 transition-colors opacity-70 hover:opacity-100"
+                data-title="پیتزا ۲ نفره"
+                data-text="اندازه خانواده"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>اشتراک</span>
+              </button>
+            </div>
+            <div class="text-left flex-shrink-0">
+              <span class="text-2xl font-extrabold text-brand-red-700"
+                >۱۵۰</span
+              >
+              <span class="text-sm text-gray-600 block">تومان</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-white mt-24 pt-16 pb-12 footer-bg">
+      <div class="container mx-auto px-6 relative z-10">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-right"
+        >
+          <div class="md:col-span-1">
+            <h4
+              class="text-xl font-bold mb-4 border-b-2 border-brand-red-500 pb-2 inline-block"
+            >
+              آدرس ما
+            </h4>
+            <p class="text-gray-300 leading-relaxed">
+              استان گلستان، گنبد کاووس، کمربندی شمال گنبد، آق قایه، خ اصلی
+              فراغی، جنب کارواش بخشنده
+            </p>
+          </div>
+
+          <div class="md:col-span-1">
+            <h4
+              class="text-xl font-bold mb-4 border-b-2 border-brand-red-500 pb-2 inline-block"
+            >
+              تماس با ما
+            </h4>
+            <ul class="text-gray-300 space-y-3">
+              <li>
+                <a
+                  href="tel:01733254330"
+                  class="flex items-center justify-center md:justify-start gap-x-2 hover:text-brand-red-400 transition-colors"
+                  dir="ltr"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#fff"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                    ></path>
+                  </svg>
+                  <span>017-33254330</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/gelinfood.ir"
+                  target="_blank"
+                  class="flex items-center justify-center md:justify-start gap-x-2 hover:text-brand-red-400 transition-colors"
+                  dir="ltr"
+                >
+                  <img class="size-7" src="insta.svg" alt="Instagram" />
+                  <span>@gelinfood.ir</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-1 flex flex-col items-center md:items-end">
+            <h3 class="text-3xl font-extrabold text-brand-red-400 mb-2">
+              غذای سنتی گلین
+            </h3>
+            <p class="text-lg text-gray-400" dir="ltr">gelinfood.ir</p>
+          </div>
+        </div>
+
+        <div
+          class="text-center text-gray-500 border-t border-gray-700 mt-12 pt-8"
+        >
+          &copy; ۱۴۰۴ - تمامی حقوق برای رستوران غذای سنتی گلین محفوظ است.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      function startHeroAnimation() {
+        const tl = gsap.timeline();
+        tl.to(".hero-title span", {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          stagger: 0.2,
+          duration: 1,
+          ease: "elastic.out(1, 0.75)",
+        });
+        tl.to(
+          ".hero-subtitle",
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+          },
+          "-=0.5"
+        );
+        tl.to(
+          ".hero-button",
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            ease: "elastic.out(1, 0.75)",
+          },
+          "-=0.6"
+        );
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuCards = document.querySelectorAll(".menu-card");
+        menuCards.forEach((card) => {
+          const hoverAnimation = gsap.to(card, {
+            scale: 1.05,
+            boxShadow:
+              "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+            duration: 0.3,
+            ease: "power1.out",
+            paused: true,
+          });
+          card.addEventListener("mouseenter", () => hoverAnimation.play());
+          card.addEventListener("mouseleave", () => hoverAnimation.reverse());
+        });
+
+        gsap.utils.toArray(".gs-fade-up").forEach((card, i) => {
+          gsap.fromTo(
+            card,
+            {
+              opacity: 0,
+              y: 50,
+              scale: 0.95,
+            },
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.8,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none none",
+              },
+            }
+          );
+        });
+
+        gsap.fromTo(
+          "main h2",
+          {
+            opacity: 0,
+            y: 30,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: "main h2",
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+
+        const shareButtons = document.querySelectorAll(".share-button");
+        shareButtons.forEach((button) => {
+          button.addEventListener("click", async (e) => {
+            e.stopPropagation();
+            const title = button.dataset.title;
+            const text = `این غذای عالی رو در رستوران گلین امتحان کنید: ${button.dataset.text}\n`;
+            const url = window.location.href.split("#")[0]; // آدرس صفحه فعلی
+
+            const shareData = {
+              title: title,
+              text: text,
+              url: url,
+            };
+
+            if (navigator.share) {
+              try {
+                await navigator.share(shareData);
+                console.log("Food shared successfully");
+              } catch (err) {
+                console.error("Error sharing:", err);
+              }
+            } else {
+              alert(
+                "قابلیت اشتراک‌گذاری در این مرورگر پشتیبانی نمی‌شود. لطفا از مرورگر موبایل خود استفاده کنید."
+              );
+            }
+          });
+        });
+      });
+
+      window.onload = () => {
+        const preloader = document.getElementById("preloader");
+        gsap.to(preloader, {
+          opacity: 0,
+          duration: 1.0,
+          delay: 0.5,
+          ease: "power2.out",
+          onComplete: () => {
+            preloader.style.display = "none";
+            startHeroAnimation();
+          },
+        });
+      };
+    </script>
+  </body>
+</html>

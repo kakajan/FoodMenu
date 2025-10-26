@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* Converted Tailwind config -> CSS variables & utilities
+   The original JS config was turned into CSS custom properties and small utility
+   classes so this file remains valid CSS and can be processed by PostCSS/Tailwind.
+*/
+
+:root {
+  --font-sans: "Vazirmatn", sans-serif;
+
+  /* brand-red palette */
+  --brand-red-50:  #fef2f2;
+  --brand-red-100: #fee2e2;
+  --brand-red-200: #fecaca;
+  --brand-red-300: #fca5a5;
+  --brand-red-400: #f87171;
+  --brand-red-500: #ef4444;
+  --brand-red-600: #dc2626;
+  --brand-red-700: #b91c1c;
+  --brand-red-800: #991b1b;
+  --brand-red-900: #7f1d1d;
+}
+
+/* Provide a font utility and set the document default to the custom font */
+html, body {
+  font-family: var(--font-sans);
+}
+
+.font-sans {
+  font-family: var(--font-sans) !important;
+}
+
+/* Small set of helper utilities for the brand colors (background, text, border) */
+/* Backgrounds */
+.bg-brand-red-50 { background-color: var(--brand-red-50); }
+.bg-brand-red-100 { background-color: var(--brand-red-100); }
+.bg-brand-red-200 { background-color: var(--brand-red-200); }
+.bg-brand-red-300 { background-color: var(--brand-red-300); }
+.bg-brand-red-400 { background-color: var(--brand-red-400); }
+.bg-brand-red-500 { background-color: var(--brand-red-500); }
+.bg-brand-red-600 { background-color: var(--brand-red-600); }
+.bg-brand-red-700 { background-color: var(--brand-red-700); }
+.bg-brand-red-800 { background-color: var(--brand-red-800); }
+.bg-brand-red-900 { background-color: var(--brand-red-900); }
+
+/* Text colors */
+.text-brand-red-50 { color: var(--brand-red-50); }
+.text-brand-red-100 { color: var(--brand-red-100); }
+.text-brand-red-200 { color: var(--brand-red-200); }
+.text-brand-red-300 { color: var(--brand-red-300); }
+.text-brand-red-400 { color: var(--brand-red-400); }
+.text-brand-red-500 { color: var(--brand-red-500); }
+.text-brand-red-600 { color: var(--brand-red-600); }
+.text-brand-red-700 { color: var(--brand-red-700); }
+.text-brand-red-800 { color: var(--brand-red-800); }
+.text-brand-red-900 { color: var(--brand-red-900); }
+
+/* Border colors */
+.border-brand-red-50 { border-color: var(--brand-red-50); }
+.border-brand-red-100 { border-color: var(--brand-red-100); }
+.border-brand-red-200 { border-color: var(--brand-red-200); }
+.border-brand-red-300 { border-color: var(--brand-red-300); }
+.border-brand-red-400 { border-color: var(--brand-red-400); }
+.border-brand-red-500 { border-color: var(--brand-red-500); }
+.border-brand-red-600 { border-color: var(--brand-red-600); }
+.border-brand-red-700 { border-color: var(--brand-red-700); }
+.border-brand-red-800 { border-color: var(--brand-red-800); }
+.border-brand-red-900 { border-color: var(--brand-red-900); }
+
+/* Convenience: map a few frequently used names to the palette */
+.bg-brand { background-color: var(--brand-red-500); }
+.text-brand { color: var(--brand-red-500); }
+.border-brand { border-color: var(--brand-red-100); }
